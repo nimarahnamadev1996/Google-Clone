@@ -1,7 +1,10 @@
+import WebSearchResults from '@/components/WebSearchResults'
 import React from 'react'
 
 const API_KEY ='AIzaSyD6rO8hQa29ARa16PKOpSvYekk4NUCWm_4'
 const CONTEXT_KEY ='95216234ad772471e'
+
+
 
 const WebSearchPage = async({searchParams}) => {
 
@@ -17,7 +20,7 @@ const WebSearchPage = async({searchParams}) => {
   return (
     <div>
       {
-        results && results.map((result) => <h1>{result.title}</h1> )
+        results &&  <WebSearchResults results={data} /> 
       }
     </div>
   )
